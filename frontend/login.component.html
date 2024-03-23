@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="card">
+    <div class="row mt20" data-ng-repeat="row in imageDataUrls">
+        <div class="col-md-6 offset-md-3" data-ng-repeat="imageDataUrl in row">
+            <div class="container text-center smaller">
+                <img  class="img-responsive smaller" src="../../../assets/login.png" alt="" />
+            </div>
+            <h3 class="text-center">Login here!!</h3>
+
+            <form (ngSubmit)="formSubmit()">
+                <div class="form-group" >
+                  <label>Username</label>
+                  <input type="input" class="form-control" name="username" [(ngModel)]="loginData.username" placeholder="Enter here">
+                  <small class="form-text text-muted">Valid username!!</small>
+
+                  </div>&nbsp;
+
+                <div class="form-group" >
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" [(ngModel)]="loginData.password" placeholder="Enter here">
+                </div>&nbsp;
+                
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary">Login</button>&nbsp;
+                <button type="reset" class="btn btn-danger">Clear</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    </div>
+</div>

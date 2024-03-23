@@ -1,0 +1,14 @@
+.smaller {
+    width: 50%;
+  }
+
+.card{
+  width: 60%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+}
+
+.card button{
+  margin: 5px;
+}

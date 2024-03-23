@@ -1,0 +1,48 @@
+
+<div class="container">
+    <div class="card">
+    <div class="row" data-ng-repeat="row in imageDataUrls">
+        <div class="col-md-6 offset-md-3" data-ng-repeat="imageDataUrl in row">
+            <div class="container text-center smaller">
+                <img  class="img-responsive smaller" src="../../../assets/register.png" alt="" />
+            </div>
+            <h3 class="text-center">Register here!!</h3>
+
+            <form (ngSubmit)="formSubmit()">
+                <div class="form-group" >
+                  <label>Username</label>
+                  <input type="input" [(ngModel)]="user.username" class="form-control" name="username" placeholder="Enter here">
+                  <small class="form-text text-muted">Username must be unique!!</small>
+
+                  </div>&nbsp;
+
+                <div class="form-group" >
+                  <label>Password</label>
+                  <input type="password" [(ngModel)]="user.password" class="form-control" name="password" placeholder="Enter here">
+                </div>&nbsp;
+                <div class="form-group" >
+                    <label>First name</label>
+                    <input type="input" [(ngModel)]="user.firstname" class="form-control" name="firstname" placeholder="Enter here">
+                </div>&nbsp;
+                <div class="form-group" >
+                    <label>Last name</label>
+                    <input type="input" [(ngModel)]="user.lastname" class="form-control" name="lastname" placeholder="Enter here">
+                </div>&nbsp;
+                <div class="form-group" >
+                    <label>Email</label>
+                    <input type="email" [(ngModel)]="user.email" class="form-control" name="email" placeholder="Enter here">
+                </div>&nbsp;
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="number" [(ngModel)]="user.phone" class="form-control" name="phone" placeholder="Enter here">
+                </div>&nbsp;
+
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary">Register</button>&nbsp;
+                <button type="reset" class="btn btn-danger">Clear</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    </div>
+</div>
